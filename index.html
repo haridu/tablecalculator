@@ -26,7 +26,7 @@
   <!-- Items Table--->
   <div class="tableexample">
     <div class="table-responsive">
-      <table class="table table-bordered">
+      <table class="table table-bordered" id="myTable">
         <thead>
           <tr>
             <th>Row</th>
@@ -37,27 +37,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>phone</td>
-            <td>Auckland</td>
-            <td>1 street</td>
-            <td>ex1@gmail.com</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>phone2</td>
-            <td>Auckland</td>
-            <td>2 street</td>
-            <td>ex2@gmail.com</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>phone3</td>
-            <td>Auckland</td>
-            <td>3 street</td>
-            <td>ex3@gmail.com</td>
-          </tr>
+
         </tbody>
       </table>
     </div>
@@ -79,38 +59,42 @@
           <h4 class="Item Details" id="myModalLabel">Modal title</h4>
         </div>
         <div class="modal-body">
-         
+
           <!--User input form -->
           <div class="input">
             <form>
               <div class="form-group">
                 <label for="inputItemName">Item Name</label>
-                <input type="itemname" class="form-control" id="inputitemname">
+                <input type="text" class="form-control" id="inputitemname">
               </div>
               <div class="form-group">
                 <label for="inputcity">City</label>
-                <input type="city" class="form-control" id="inputcity" >
+                <input type="text" class="form-control" id="inputcity">
               </div>
-               <div class="form-group">
+              <div class="form-group">
                 <label for="FoundLocation">Found Location</label>
-                <input type="FoundLocation" class="form-control" id="inputFoundLoaction" >
+                <input type="text" class="form-control" id="inputFoundLoaction">
               </div>
-              </div>
-               <div class="form-group">
-                <label for="Founder Email">Founder Email</label>
-                <input type="Founder Email" class="form-control" id="inputFounderemail" >
-              </div>
-              
-            </form>
+          </div>
+          <div class="form-group">
+            <label for="Founder Email">Founder Email</label>
+            <input type="text" class="form-control" id="inputFounderemail">
           </div>
 
+          </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary"> Add </button>
-        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!--  <button type="button" class="btn btn-primary"> Add </button> -->
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" onclick="myFunction()"> Save  </button>
+
+
+
       </div>
     </div>
+  </div>
   </div>
 
 
@@ -118,6 +102,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
-</body>
 
-</html>
+  <!--script for input -->
+  <script src="functionss.js"></script>
+</body>
