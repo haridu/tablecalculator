@@ -37,9 +37,9 @@
           <div class="row ">
 				 <!-- HSIZE -->
 			<label for="return1"><b>HSIZE=</b></label>
-             <input id="blockin" name='return1' class=" input input-sm" style="width:100px"type="text" placeholder="BLOCK_SIZE"> 
+             <input id="block_in" name='return1' class=" input input-sm" style="width:100px"type="text" placeholder="BLOCK_SIZE"> 
 			 <b>-</b>
-			<input id="KCBH" name='return1' class=" input input-sm" style="width:60px"type="text" placeholder="KCBH" > 
+			<input id="KCBH_IN" name='return1' class=" input input-sm" style="width:60px"type="text" placeholder="KCBH" > 
 			 <b>-</b>
 			<input id="UB4" name='return1' class=" input input-sm" style="width:60px"type="text" placeholder="UB4"> 
 			 <b>-</b>
@@ -60,25 +60,19 @@
 			<br>
 			<br>
 
-			 <!-- total columnsize -->
-			<label for="return1"><b>total column size =</b></label>
-             <input id="columnsize" name='return1' class=" input input-sm" style="width:100px"type="text" placeholder="columnsize"> 
-			 <b>+</b>
-			<input id="Bytelength" name='return1' class=" input input-sm" style="width:60px"type="text" placeholder="Bytelength" > 
 			
-			<br>
-			<br>
+			
 
 			 <!-- row size -->
 			<label for="return1"><b>rowsize =</b></label>
              <input id="rowheader" name='return1' class=" input input-sm" style="width:100px"type="text" placeholder="row header"> 
 			 <b>+</b>
-			<input id="sumofclumnsizes " name='return1' class=" input input-sm" style="width:60px"type="text" placeholder="sumofclumnsizes" > 
+			<input id="sumofcolumnsizes" name='return1' class=" input input-sm" style="width:60px"type="text" placeholder="sumofclumnsizes" > 
 			
             <br>
 			<br>
 			 <!-- rowspace-->
-			<label for="return1"><b>rowspace=MAX(RowHeader+UB4</b></label>
+			<label for="return1"><b>rowspace=MAX(RowHeader+UB4+</b></label>
              <input id="SB2" name='return1' class=" input input-sm" style="width:100px"type="text" placeholder="SB2"> 
 			 <b>,RowSize)+SB2</b>
 			
@@ -89,17 +83,22 @@
 			<label for="return1"><b>Number of rows in Block(RB) =(Availspace/rowspace)</b></label>
             <br>
 			<br>
-			
+			<label for="return1"><b>Total rows required=</b></label>
+            <input id="rowsrequired" name='return1' class=" input input-sm" style="width:100px"type="text" placeholder="rows required"> 
+			  <br>
+			<br>
+			 <!-- button -->
+			<button type="button" onclick="formula()" class="btn btn-primary">Estimate</button>
           </div>           
       </form>
   </div>
   
  
+
+
  
-
-
-  <!-- button -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Estimate</button>
+  
+  
 
   
 
@@ -110,5 +109,5 @@
   <script src="js/bootstrap.min.js"></script>
 
   <!--script for input -->
-  <script src="functions.ts"></script>
+  <script src="indexfun.js"></script>
 </body>
