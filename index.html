@@ -35,7 +35,8 @@
       <form>
          
           <div class="row ">
-             <label for="return1"><b>HSIZE=</b></label>
+				 <!-- HSIZE -->
+			<label for="return1"><b>HSIZE=</b></label>
              <input id="blockin" name='return1' class=" input input-sm" style="width:100px"type="text" placeholder="BLOCK_SIZE"> 
 			 <b>-</b>
 			<input id="KCBH" name='return1' class=" input input-sm" style="width:60px"type="text" placeholder="KCBH" > 
@@ -49,54 +50,52 @@
 			<input id="KTBIT" name='return1' class=" input input-sm" style="width:60px"type="text" placeholder="KTBIT"> 
 			 <b>-</b>
 			<input id="KDBH" name='return1' class=" input input-sm" style="width:60px"type="text" placeholder="KDBH"> 
-			 
+			<br>
+			<br>
+			 <!-- avilsacepe -->
+			<label for="return1"><b>Availspace= CEIL (Hsize*(1-</b></label>
+             <input id="pctfreein" name='return1' class=" input input-sm" style="width:100px"type="text" placeholder="PCTFREE"> 
+			 <b>/100)) -</b>
+			<input id="KDBT" name='return1' class=" input input-sm" style="width:60px"type="text" placeholder="KDBT" > 
+			<br>
+			<br>
+
+			 <!-- total columnsize -->
+			<label for="return1"><b>total column size =</b></label>
+             <input id="columnsize" name='return1' class=" input input-sm" style="width:100px"type="text" placeholder="columnsize"> 
+			 <b>+</b>
+			<input id="Bytelength" name='return1' class=" input input-sm" style="width:60px"type="text" placeholder="Bytelength" > 
 			
-			<br><b>Return:</b>
+			<br>
+			<br>
+
+			 <!-- row size -->
+			<label for="return1"><b>rowsize =</b></label>
+             <input id="rowheader" name='return1' class=" input input-sm" style="width:100px"type="text" placeholder="row header"> 
+			 <b>+</b>
+			<input id="sumofclumnsizes " name='return1' class=" input input-sm" style="width:60px"type="text" placeholder="sumofclumnsizes" > 
 			
-              
+            <br>
+			<br>
+			 <!-- rowspace-->
+			<label for="return1"><b>rowspace=MAX(RowHeader+UB4</b></label>
+             <input id="SB2" name='return1' class=" input input-sm" style="width:100px"type="text" placeholder="SB2"> 
+			 <b>,RowSize)+SB2</b>
+			
+			<br>
+			<br>
+
+			 <!-- number of rows in block -->
+			<label for="return1"><b>Number of rows in Block(RB) =(Availspace/rowspace)</b></label>
+            <br>
+			<br>
+			
           </div>           
       </form>
   </div>
   
  
-  <!-- </div> formula -->
- <div class="form-group">
- <p>Table size esimate formula:</p>
-  <dl>
-    <dt>HSIZE</dt>
-    <dd>HSIZE = 
-	
-	
-	
-	
-	DB_BLOCK_SIZE-KCBH- UB4-KTBBH-(INITRANS-1)*KTBIT – KDBH</dd>
-	
-	
-	
-	
-	
-	
-    
-	<dt>availspace</dt>
-    <dd>availspace = CEIL(hsize*(1-PCTFREE/100))-KDBT</dd>
-	
-	<dt>total column size </dt>
-    <dd>total column size = column size +byte length</dd>
-	
-	<dt>rowsize </dt>
-    <dd>rowsize = row header + sum of all column sizes</dd>
-	
-	<dt>rowspace </dt>
-    <dd>rowspace = max(row header+UB4+SB2,rowsize)+SB2</dd>
-	
-	<dt>Number of rows in block </dt>
-    <dd>Number of rows in block (RB)=FLOOR(availspace/rowspace)</dd></dd>
-	
-	
-	
-  </dl>
  
- </div>
 
 
   <!-- button -->
