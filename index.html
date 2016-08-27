@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Lost and Found</title>
+  <title>Table Estimator</title>
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -27,12 +27,47 @@
 </div>
  </div>
 
-
- <div class="formula">
+ <!-- formula -->
+ 
+ 
+ 
+ <div class="container ">
+      <form>
+         
+          <div class="row ">
+              <label for="return1"><b>HSIZE=</b></label>
+              <input id="blockin" name='return1' class=" input input-sm" style="width:100px"type="text" placeholder="BLOCK_SIZE"> 
+					  <b>-</b>
+			<input id="KCBH" name='return1' class=" input input-sm" style="width:60px"type="text"> 
+					  
+					  
+					 
+					 
+					 
+					 <br><b>Return:</b>
+              
+          </div>           
+      </form>
+  </div>
+  
+ 
+  <!-- </div> formula -->
+ <div class="form-group">
  <p>Table size esimate formula:</p>
   <dl>
     <dt>HSIZE</dt>
-    <dd>HSIZE = DB_BLOCK_SIZE-KCBH- UB4-KTBBH-(INITRANS-1)*KTBIT – KDBH</dd>
+    <dd>HSIZE = 
+	
+	
+	
+	
+	DB_BLOCK_SIZE-KCBH- UB4-KTBBH-(INITRANS-1)*KTBIT – KDBH</dd>
+	
+	
+	
+	
+	
+	
     
 	<dt>availspace</dt>
     <dd>availspace = CEIL(hsize*(1-PCTFREE/100))-KDBT</dd>
