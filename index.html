@@ -20,82 +20,46 @@
 </head>
 
 <body>
-  <!-- Header--->
-  <h1>Lost and Found Notice Board!</h1>
+ <div class="descriptor">
+ <div class="jumbotron">
+  <h1>OrcleSQL TableSize Estimator</h1>
+  <p>Enter correct values into the inputs and press estimate button calculate size of table</p>
+</div>
+ </div>
 
-  <!-- Items Table--->
-  <div class="tableexample">
-    <div class="table-responsive">
-      <table class="table table-bordered" id="myTable">
-        <thead>
-          <tr>
-            <th>Row</th>
-            <th>Item Name</th>
-            <th>City</th>
-            <th>Found Location</th>
-            <th>Founder email</th>
-          </tr>
-        </thead>
-        <tbody>
 
-        </tbody>
-      </table>
-    </div>
-  </div>
-
+ <div class="formula">
+ <p>Table size esimate formula:</p>
+  <dl>
+    <dt>HSIZE</dt>
+    <dd>HSIZE = DB_BLOCK_SIZE-KCBH- UB4-KTBBH-(INITRANS-1)*KTBIT – KDBH</dd>
+    
+	<dt>availspace</dt>
+    <dd>availspace = CEIL(hsize*(1-PCTFREE/100))-KDBT</dd>
+	
+	<dt>total column size </dt>
+    <dd>total column size = column size +byte length</dd>
+	
+	<dt>rowsize </dt>
+    <dd>rowsize = row header + sum of all column sizes</dd>
+	
+	<dt>rowspace </dt>
+    <dd>rowspace = max(row header+UB4+SB2,rowsize)+SB2</dd>
+	
+	<dt>Number of rows in block </dt>
+    <dd>Number of rows in block (RB)=FLOOR(availspace/rowspace)</dd></dd>
+	
+	
+	
+  </dl>
+ 
+ </div>
 
 
   <!-- button -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Item</button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Estimate</button>
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-          <h4 class="Item Details" id="myModalLabel">Modal title</h4>
-        </div>
-        <div class="modal-body">
-
-          <!--User input form -->
-          <div class="input">
-            <form>
-              <div class="form-group">
-                <label for="inputItemName">Item Name</label>
-                <input type="text" class="form-control" id="inputitemname">
-              </div>
-              <div class="form-group">
-                <label for="inputcity">City</label>
-                <input type="text" class="form-control" id="inputcity">
-              </div>
-              <div class="form-group">
-                <label for="FoundLocation">Found Location</label>
-                <input type="text" class="form-control" id="inputFoundLoaction">
-              </div>
-          </div>
-          <div class="form-group">
-            <label for="Founder Email">Founder Email</label>
-            <input type="text" class="form-control" id="inputFounderemail">
-          </div>
-
-          </form>
-        </div>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <!--  <button type="button" class="btn btn-primary"> Add </button> -->
-        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" onclick="myFunction()"> Save  </button>
-
-
-
-      </div>
-    </div>
-  </div>
-  </div>
+  
 
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
