@@ -1,6 +1,5 @@
 
 function formula() {
-	<script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
     var block_size = parseInt(document.getElementById('block_in').value);
     var KCBH_IN = parseInt(document.getElementById('KCBH_IN').value);
     var UB4 = parseInt(document.getElementById('UB4').value);
