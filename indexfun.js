@@ -32,7 +32,7 @@ function formula() {
 
 	var params = {
             // Request parameters
-            "q": tablesize_in_bytes+ "byetes to mb",
+            "q": tablesize_in_bytes+ "bytes to mb conversion calculator",
             "count": "10",
             "offset": "0",
             "mkt": "en-us",
@@ -50,11 +50,10 @@ function formula() {
             data: "{body}",
         })
         .done(function(data) {
-          var randomIndex = Math.floor(Math.random() * 50);
-        	var imgLink = '<img width="500px" src="' + data.d.results[0].Image[randomIndex].MediaUrl + '" />';
-        $('#output').html(imgLink);
+         var results = data.SearchResponse.Web.Results;
+        	
         
-        alert(imgLink);
+        alert(results);
         })
         .fail(function() {
             alert("error");
