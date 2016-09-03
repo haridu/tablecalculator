@@ -40,6 +40,41 @@
 <div class="fb-like" data-href="http://tablesize.azurewebsites.net/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
  </div>
 
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  Info
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Oracle Tablesize Estimator </h4>
+      </div>
+      <div class="modal-body">
+       <p>The Table Size estimator is used for estimating size of the tables when creating Oracle SQl environments.</p>
+	    <dl>
+    <dt>Oracle explanation</dt>
+    <dd>Typically, the space required to store a set of rows will exceed this calculation when updates and deletes are also being performed on the table. The actual space required for complex workloads is best determined empirically, and then scaled by the number of rows in the table. In general, increasing amounts of concurrent activity on the same data block results in additional overhead (for transaction records), so it is important that you take into account such activity when scaling empirical results.</dd>
+    <dt>Usefull Resources</dt>
+    <dd> <a href="https://docs.oracle.com/cd/A57673_01/DOC/server/doc/SAD73/apA.htm"> Oracle Tutorial </a> </dd>
+  </dl>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+
+
+
  <!-- formula -->
  
  <button type="button" onclick="formula()" class="btn btn-primary">Estimate</button>
