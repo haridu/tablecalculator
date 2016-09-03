@@ -50,7 +50,8 @@ function formula() {
             data: "{body}",
         })
         .done(function(data) {
-            alert("success");
+        	
+            alert(data.url);
         })
         .fail(function() {
             alert("error");
