@@ -1,5 +1,6 @@
 
 function formula() {
+	<script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
     var block_size = parseInt(document.getElementById('block_in').value);
     var KCBH_IN = parseInt(document.getElementById('KCBH_IN').value);
     var UB4 = parseInt(document.getElementById('UB4').value);
@@ -28,40 +29,8 @@ function formula() {
        /* alert("The table is " + tablesize_in_bytes + " bytes");*/
     }
     
-   <!-- microsoft SDK -->
-
-        var params = {
-            // Request parameters
-            "q": "microsoft",
-            "count": "10",
-            "offset": "0",
-            "mkt": "en-us",
-            "safeSearch": "Moderate",
-        };
-      
-        $.ajax({
-            url: "https://api.cognitive.microsoft.com/bing/v5.0/news/search?" + $.param(params),
-            beforeSend: function(xhrObj){
-                // Request headers
-                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","be1379007a954dbfaf6c3de70d61c773");
-            },
-            type: "GET",
-            // Request body
-            data: "{body}",
-        })
-        .done(function(data) {
-         results = data.SearchResponse.Results[1];	
-        url=result.url;
-        
-         
-            alert(""+results);
-        })
-        .fail(function() {
-            alert("error");
-        });
-
-   
-
+   var string = numeral(1000).format('0,0');
+	alert(string);
 	
     
 }
