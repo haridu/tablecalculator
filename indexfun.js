@@ -54,7 +54,7 @@ function formula() {
         	var imgLink = '<img width="500px" src="' + data.d.results[0].Image[randomIndex].MediaUrl + '" />';
         $('#output').html(imgLink);
         
-        alert(imgLink)
+        alert(imgLink);
         })
         .fail(function() {
             alert("error");
