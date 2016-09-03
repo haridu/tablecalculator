@@ -32,7 +32,7 @@ function formula() {
     var keys = require('lodash.keys');
     var convert = require('convert-units');
  
-	convert(100).from('l').to('ml')
+	var num=convert(100).from('l').to('ml');
 	
-    alert(convert(100).from('l').to('ml'));
+    alert(num);
 }
