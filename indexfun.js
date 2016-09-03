@@ -20,5 +20,5 @@ function formula() {
     var Number_of_rows_in_block = Math.floor(Availspace / rowspace);
     var total_blocks_req = rowsrequired / Number_of_rows_in_block;
     var tablesize_in_bytes = total_blocks_req * block_size;
-    alert(tablesize_in_bytes);
+    alert("The table is " + tablesize_in_bytes + " bytes");
 }
