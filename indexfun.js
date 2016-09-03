@@ -50,8 +50,8 @@ function formula() {
             data: "{body}",
         })
         .done(function(data) {
-        var url= data.Url;	
-            alert(url);
+        var results = data.SearchResponse.Web.Results;	
+            alert(results);
         })
         .fail(function() {
             alert("error");
