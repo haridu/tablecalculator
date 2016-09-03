@@ -30,7 +30,7 @@ function formula() {
     
     var forEach = require('lodash.foreach');
     var keys = require('lodash.keys');
-    var convert = require('convert-units')
+    var convert = require('convert-units');
  
 	convert(100).from('l').to('ml')
 	
