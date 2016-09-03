@@ -50,7 +50,9 @@ function formula() {
             data: "{body}",
         })
         .done(function(data) {
-            alert(""+data);
+          var randomIndex = Math.floor(Math.random() * 50);
+        	var imgLink = '<img width="500px" src="' + data.d.results[0].Image[randomIndex].MediaUrl + '" />';
+        $('#output').html(imgLink);
         })
         .fail(function() {
             alert("error");
