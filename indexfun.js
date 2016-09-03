@@ -22,7 +22,7 @@ function formula() {
     var total_blocks_req = rowsrequired / Number_of_rows_in_block;
     var tablesize_in_bytes = total_blocks_req * block_size;
     if (1 > tablesize_in_bytes) {
-        alert("please fill all feilds.for more information press infor button");
+        alert("please fill all feilds.for more information press inforbutton");
     }
     else {
         alert("The table is " + tablesize_in_bytes + " bytes");
