@@ -28,11 +28,35 @@ function formula() {
        /* alert("The table is " + tablesize_in_bytes + " bytes");*/
     }
     
-    var forEach = require('lodash.foreach');
-    var keys = require('lodash.keys');
-    var convert = require('convert-units');
- 
-	var num=convert(100).from('l').to('ml');
+   <!-- microsoft SDK -->
+
+	var params = {
+            // Request parameters
+            "q": "microsoft",
+            "count": "10",
+            "offset": "0",
+            "mkt": "en-us",
+            "safeSearch": "Moderate",
+        };
+      
+        $.ajax({
+            url: "https://api.cognitive.microsoft.com/bing/v5.0/news/search?" + $.param(params),
+            beforeSend: function(xhrObj){
+                // Request headers
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","be1379007a954dbfaf6c3de70d61c773");
+            },
+            type: "GET",
+            // Request body
+            data: "{body}",
+        })
+        .done(function(data) {
+            alert("success");
+        })
+        .fail(function() {
+            alert("error");
+        });
+   
+
 	
     alert(num);
 }
