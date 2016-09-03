@@ -34,5 +34,5 @@ function formula() {
  
 	var num=convert(100).from('l').to('ml');
 	
-    alert(num);
+    alert(""+num);
 }
