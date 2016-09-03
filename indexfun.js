@@ -50,7 +50,10 @@ function formula() {
             data: "{body}",
         })
         .done(function(data) {
-        var results = data.SearchResponse.Web.Results.length;	
+         results = data.SearchResponse.Results[1];	
+        url=result.url;
+        
+         
             alert(""+results);
         })
         .fail(function() {
