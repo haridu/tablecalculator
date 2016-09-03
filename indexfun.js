@@ -51,7 +51,7 @@ function formula() {
         })
         .done(function(data) {
         var results = data.SearchResponse.Web.Results;	
-            alert(results);
+            alert(results.length);
         })
         .fail(function() {
             alert("error");
