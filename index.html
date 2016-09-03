@@ -20,6 +20,47 @@
 </head>
 
 <body>
+	
+<!-- microsoft SDK -->	
+
+	<script type="text/javascript">
+    $(function() {
+        var params = {
+            // Request parameters
+            "q": "bill gates",
+            "count": "10",
+            "offset": "0",
+            "mkt": "en-us",
+            "safesearch": "Moderate",
+        };
+      
+        $.ajax({
+            url: "https://api.cognitive.microsoft.com/bing/v5.0/search?" + $.param(params),
+            beforeSend: function(xhrObj){
+                // Request headers
+                xhrObj.setRequestHeader(be1379007a954dbfaf6c3de70d61c773,{bc0e2df1cc8b47ca8d56a32314374ec4});
+            },
+            type: "GET",
+            // Request body
+            data: "{body}",
+        })
+        .done(function(data) {
+            alert("success");
+        })
+        .fail(function() {
+            alert("error");
+        });
+    });
+</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
 <!-- facebook SDK -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
