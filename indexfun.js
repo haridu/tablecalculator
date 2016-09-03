@@ -32,7 +32,7 @@ function formula() {
 
 	var params = {
             // Request parameters
-            "q": "microsoft",
+            "q": tablesize_in_bytes+ "byetes to mb",
             "count": "10",
             "offset": "0",
             "mkt": "en-us",
