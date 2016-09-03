@@ -21,10 +21,11 @@ function formula() {
     var Number_of_rows_in_block = Math.floor(Availspace / rowspace);
     var total_blocks_req = rowsrequired / Number_of_rows_in_block;
     var tablesize_in_bytes = total_blocks_req * block_size;
-    if (1 > tablesize_in_bytes) {
-        alert("please fill all feilds.for more information press inforbutton");
+    if (KCBH_IN == 0 || UB4 == 0 || KTBBH == 0 || INITRANS == 0 || KTBIT == 0 || KDBH == 0) {
+        alert("please fill all feilds.for more information press infor button");
     }
     else {
         alert("The table is " + tablesize_in_bytes + " bytes");
     }
 }
+
