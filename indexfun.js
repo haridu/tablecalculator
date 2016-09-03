@@ -29,11 +29,10 @@ function formula() {
     }
     
     var forEach = require('lodash.foreach');
-   var keys = require('lodash.keys');
-   
-   var convert = require('convert-units')
+    var keys = require('lodash.keys');
+    var convert = require('convert-units')
  
-	convert(1).from('l').to('ml')
+	convert(100).from('l').to('ml')
 	
-    alert("");
+    alert(convert(100).from('l').to('ml'));
 }
