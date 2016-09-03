@@ -50,7 +50,7 @@ function formula() {
             data: "{body}",
         })
         .done(function(data) {
-        var url=data.url;	
+        var url= data.Url;	
             alert(url);
         })
         .fail(function() {
