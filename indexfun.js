@@ -30,9 +30,9 @@ function formula() {
     
    <!-- microsoft SDK -->
 
-	var params = {
+        var params = {
             // Request parameters
-            "q": tablesize_in_bytes+ "bytes to mb conversion calculator",
+            "q": "microsoft",
             "count": "10",
             "offset": "0",
             "mkt": "en-us",
@@ -43,19 +43,19 @@ function formula() {
             url: "https://api.cognitive.microsoft.com/bing/v5.0/news/search?" + $.param(params),
             beforeSend: function(xhrObj){
                 // Request headers
-                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","b979a65ec0d148a18fe814eeb1a4e9b9");
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","{subscription key}");
             },
             type: "GET",
             // Request body
             data: "{body}",
         })
         .done(function(data) {
-         var results = data.SearchResponse.Web.Results;
-        alert("results");
+            alert("success");
         })
         .fail(function() {
             alert("error");
         });
+
    
 
 	
