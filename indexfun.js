@@ -25,7 +25,7 @@ function formula() {
      alert("please fill all feilds.for more information press infor button");
     }
     else {
-    	/*use numaral api to convert it to KB  */
+    	/*use numaral api to convert it to appropriate unit  */
        var string = numeral(tablesize_in_bytes).format('0 b'); 
 	/*shows result */
 	alert(string);
