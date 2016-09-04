@@ -29,9 +29,8 @@ function formula() {
        var string = numeral(tablesize_in_bytes).format('0 b'); 
 	/*shows result */
 	
-	
-	$("#answermodal").modal()
-	//alert(string);
+
+	alert(string);
     }
     
   
