@@ -26,7 +26,7 @@ function formula() {
     }
     else {
     	/*use numaral api to convert it to KB  */
-       var string = numeral(tablesize_in_bytes).format('0 b');
+       var string = numeral(tablesize_in_bytes).format('0 b'); 
 	/*shows result */
 	alert(string);
     }
