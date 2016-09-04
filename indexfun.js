@@ -1,4 +1,4 @@
-/// <reference path="C:\Users\admin\Desktop\tablecalculator-master\typings\globals\jquery\index.d.ts" />
+
 var numeral;
 function formula() {
     var block_size = parseInt(document.getElementById('block_in').value);
