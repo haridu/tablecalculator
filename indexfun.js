@@ -1,4 +1,5 @@
-
+/// <reference path="C:\Users\admin\Desktop\tablecalculator-master\typings\globals\jquery\index.d.ts" />
+var numeral;
 function formula() {
     var block_size = parseInt(document.getElementById('block_in').value);
     var KCBH_IN = parseInt(document.getElementById('KCBH_IN').value);
@@ -22,16 +23,10 @@ function formula() {
     var total_blocks_req = rowsrequired / Number_of_rows_in_block;
     var tablesize_in_bytes = total_blocks_req * block_size;
     if (!(KCBH_IN > 0 || UB4 > 0 || KTBBH > 0 || INITRANS > 0 || KTBIT > 0 || KDBH > 0)) {
-     alert("please fill all feilds.for more information press infor button");
+        alert("please fill all feilds.for more information press infor button");
     }
     else {
-    	/*use numaral api to convert it to appropriate unit  */
-       var string = numeral(tablesize_in_bytes).format('0 b'); 
-	/*shows result */
-	alert(string);
+        var String = numeral(tablesize_in_bytes).format('0 b');
+        alert("The table is " + String);
     }
-    
-  
-	
-    
 }

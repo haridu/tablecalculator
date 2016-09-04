@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
 
- <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
-  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -23,12 +23,10 @@
 </head>
 
 <body>
-	
-	
-	
-<!-- facebook SDK -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
+
+  <!-- facebook SDK -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
@@ -41,126 +39,118 @@
 
 
 
-<!--  info Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+  <!--  info Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h4 class="modal-title" id="myModalLabel">Oracle Tablesize Estimator </h4>
-      </div>
-      <div class="modal-body">
-       <p>The Table Size estimator can be used for estimating size of the tables when creating Oracle SQl environments.</p>
-	    <dl>
-    <dt>Oracle explanation</dt>
-    <dd>Typically, the space required to store a set of rows will exceed this calculation when updates and deletes are also being performed on the table. The actual space required for complex workloads is best determined empirically, and then scaled by the number of rows in the table. In general, increasing amounts of concurrent activity on the same data block results in additional overhead (for transaction records), so it is important that you take into account such activity when scaling empirical results.</dd>
-    <dt>Usefull Resources</dt>
-    <dd> <a href="https://docs.oracle.com/cd/A57673_01/DOC/server/doc/SAD73/apA.htm"> Oracle Tutorial </a> </dd>
-  </dl>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <h4 class="modal-title" id="myModalLabel">Oracle Tablesize Estimator </h4>
+        </div>
+        <div class="modal-body">
+          <p>The Table Size estimator can be used for estimating size of the tables when creating Oracle SQl environments.</p>
+          <dl>
+            <dt>Oracle explanation</dt>
+            <dd>Typically, the space required to store a set of rows will exceed this calculation when updates and deletes are
+              also being performed on the table. The actual space required for complex workloads is best determined empirically,
+              and then scaled by the number of rows in the table. In general, increasing amounts of concurrent activity on
+              the same data block results in additional overhead (for transaction records), so it is important that you take
+              into account such activity when scaling empirical results.</dd>
+            <dt>Usefull Resources</dt>
+            <dd> <a href="https://docs.oracle.com/cd/A57673_01/DOC/server/doc/SAD73/apA.htm"> Oracle Tutorial </a> </dd>
+          </dl>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
   <div class="container ">
- 
 
- 
-<!-- formula -->
-      <form>
-          <div class="row ">
-      	 <!-- Header -->
- <div class="descriptor">
- <div class="jumbotron">
-  <h1>OrcleSQL TableSize Estimator</h1>
-  <p>Enter correct values into the inputs and press estimate button calculate size of table</p>
-  <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    <!-- formula -->
+    <form>
+      <div class="row ">
+        <!-- Header -->
+        <div class="descriptor">
+          <div class="jumbotron">
+            <h1>OrcleSQL TableSize Estimator</h1>
+            <p>Enter correct values into the inputs and press estimate button calculate size of table</p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
   Info
 </button>
-<!-- facebook -->
-<div class="fb-like" data-href="http://tablesize.azurewebsites.net/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
- 
+            <!-- facebook -->
+            <div class="fb-like" data-href="http://tablesize.azurewebsites.net/" data-layout="standard" data-action="like" data-size="small"
+              data-show-faces="true" data-share="true"></div>
 
-</form>
 
- </div>
-</div>
-            <!-- picture -->
-           <div id="output"></div>
-        
-          	
-				 <!-- HSIZE -->
-			<label for="return1"><b>HSIZE=</b></label>
-             <input id="block_in" name='return1' class=" input input-sm" style="width:100px"type="text" placeholder="BLOCK_SIZE"> 
-			 <b>-</b>
-			<input id="KCBH_IN" name='return1' class=" input input-sm" style="width:60px"type="text" placeholder="KCBH" > 
-			 <b>-</b>
-			<input id="UB4" name='return1' class=" input input-sm" style="width:60px"type="text" placeholder="UB4"> 
-			 <b>-</b>
-			<input id="KTBBH" name='return1' class=" input input-sm" style="width:60px"type="text" placeholder="KTBBH"> 
-			 <b>-( </b>
-			<input id="INITRANS" name='return1' class=" input input-sm" style="width:60px"type="text" placeholder="INITRANS"> 
-			<b> -1 ) *</b>
-			<input id="KTBIT" name='return1' class=" input input-sm" style="width:60px"type="text" placeholder="KTBIT"> 
-			 <b>-</b>
-			<input id="KDBH" name='return1' class=" input input-sm" style="width:60px"type="text" placeholder="KDBH"> 
-			<br>
-			<br>
-			 <!-- avilsacepe -->
-			<label for="return1"><b>Availspace= CEIL (Hsize*(1-</b></label>
-             <input id="pctfreein" name='return1' class=" input input-sm" style="width:100px"type="text" placeholder="PCTFREE"> 
-			 <b>/100)) -</b>
-			<input id="KDBT" name='return1' class=" input input-sm" style="width:60px"type="text" placeholder="KDBT" > 
-			<br>
-			<br>
+    </form>
 
-			
-			
+    </div>
+    </div>
+    <!-- picture -->
+    <div id="output"></div>
 
-			 <!-- row size -->
-			<label for="return1"><b>rowsize =</b></label>
-             <input id="rowheader" name='return1' class=" input input-sm" style="width:100px"type="text" placeholder="row header"> 
-			 <b>+</b>
-			<input id="sumofcolumnsizes" name='return1' class=" input input-sm" style="width:120px"type="text" placeholder="sumofclumnsizes" > 
-			
-            <br>
-			<br>
-			 <!-- rowspace-->
-			<label for="return1"><b>rowspace=MAX(RowHeader+UB4+</b></label>
-             <input id="SB2" name='return1' class=" input input-sm" style="width:100px"type="text" placeholder="SB2"> 
-			 <b>,RowSize)+SB2</b>
-			
-			<br>
-			<br>
 
-			 <!-- number of rows in block -->
-			<label for="return1"><b>Number of rows in Block(RB) =(Availspace/rowspace)</b></label>
-            <br>
-			<br>
-			<label for="return1"><b>Total rows required=</b></label>
-            <input id="rowsrequired" name='return1' class=" input input-sm" style="width:100px"type="text" placeholder="rows required"> 
-			  <br>
-			<br>
-			 <!-- button -->
-			<button type="button" onclick="formula()" class="btn btn-primary">Estimate</button>
-          </div> 
-          
-          <div class="fb-comments" data-href="http://tablesize.azurewebsites.net/" data-numposts="3"></div>
-          
-        
-        </form>
+    <!-- HSIZE -->
+    <label for="return1"><b>HSIZE=</b></label>
+    <input id="block_in" name='return1' class=" input input-sm" style="width:100px" type="text" placeholder="BLOCK_SIZE">
+    <b>-</b>
+    <input id="KCBH_IN" name='return1' class=" input input-sm" style="width:60px" type="text" placeholder="KCBH">
+    <b>-</b>
+    <input id="UB4" name='return1' class=" input input-sm" style="width:60px" type="text" placeholder="UB4">
+    <b>-</b>
+    <input id="KTBBH" name='return1' class=" input input-sm" style="width:60px" type="text" placeholder="KTBBH">
+    <b>-( </b>
+    <input id="INITRANS" name='return1' class=" input input-sm" style="width:60px" type="text" placeholder="INITRANS">
+    <b> -1 ) *</b>
+    <input id="KTBIT" name='return1' class=" input input-sm" style="width:60px" type="text" placeholder="KTBIT">
+    <b>-</b>
+    <input id="KDBH" name='return1' class=" input input-sm" style="width:60px" type="text" placeholder="KDBH">
+    <br>
+    <br>
+    <!-- avilsacepe -->
+    <label for="return1"><b>Availspace= CEIL (Hsize*(1-</b></label>
+    <input id="pctfreein" name='return1' class=" input input-sm" style="width:100px" type="text" placeholder="PCTFREE">
+    <b>/100)) -</b>
+    <input id="KDBT" name='return1' class=" input input-sm" style="width:60px" type="text" placeholder="KDBT">
+    <br>
+    <br>
 
-     
+    <!-- row size -->
+    <label for="return1"><b>rowsize =</b></label>
+    <input id="rowheader" name='return1' class=" input input-sm" style="width:100px" type="text" placeholder="row header">
+    <b>+</b>
+    <input id="sumofcolumnsizes" name='return1' class=" input input-sm" style="width:120px" type="text" placeholder="sumofclumnsizes">
+
+    <br>
+    <br>
+    <!-- rowspace-->
+    <label for="return1"><b>rowspace=MAX(RowHeader+UB4+</b></label>
+    <input id="SB2" name='return1' class=" input input-sm" style="width:100px" type="text" placeholder="SB2">
+    <b>,RowSize)+SB2</b>
+
+    <br>
+    <br>
+
+    <!-- number of rows in block -->
+    <label for="return1"><b>Number of rows in Block(RB) =(Availspace/rowspace)</b></label>
+    <br>
+    <br>
+    <label for="return1"><b>Total rows required=</b></label>
+    <input id="rowsrequired" name='return1' class=" input input-sm" style="width:100px" type="text" placeholder="rows required">
+    <br>
+    <br>
+    <!-- button -->
+    <button type="button" onclick="formula()" class="btn btn-primary">Estimate</button>
+    </div>
+
+    <div class="fb-comments" data-href="http://tablesize.azurewebsites.net/" data-numposts="3"></div>
+    </form>
   </div>
- 
- 
-  
-
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
