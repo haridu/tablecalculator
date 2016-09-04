@@ -36,6 +36,8 @@ function formula(){
    if(!(KCBH_IN>0||UB4>0||KTBBH>0||INITRANS>0||KTBIT>0||KDBH>0)){
 	alert("please fill all feilds.for more information press infor button");
    }else{
-    alert("The table is "+tablesize_in_bytes+" bytes");
+    var String =numeral(tablesize_in_bytes).format('0 b');
+	
+	alert("The table is "+String);
    }
  }
