@@ -22,14 +22,16 @@ function formula() {
     var total_blocks_req = rowsrequired / Number_of_rows_in_block;
     var tablesize_in_bytes = total_blocks_req * block_size;
     if (!(KCBH_IN > 0 || UB4 > 0 || KTBBH > 0 || INITRANS > 0 || KTBIT > 0 || KDBH > 0)) {
-       /* alert("please fill all feilds.for more information press infor button");*/
+     alert("please fill all feilds.for more information press infor button");
     }
     else {
-       /* alert("The table is " + tablesize_in_bytes + " bytes");*/
+    	/*use numaral api to convert it to KB  */
+       var string = numeral(tablesize_in_bytes).format('o b');
+	/*shows result */
+	alert(string);
     }
     
-   var string = numeral(1000).format('0,0');
-	alert(string);
+  
 	
     
 }
