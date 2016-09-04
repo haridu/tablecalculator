@@ -31,7 +31,7 @@ function formula() {
 	
 	
 	$("#answermodal").modal()
-	alert(string);
+	//alert(string);
     }
     
   
