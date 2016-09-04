@@ -28,6 +28,7 @@ function formula() {
     else {
        /* dynamicly calls numeral api for coverting bytes to appropriate unit  type*/
         var String = numeral(tablesize_in_bytes).format('0 b');
+        
         alert("The table is " + String);
     }
 }
