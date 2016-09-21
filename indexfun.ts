@@ -1,4 +1,7 @@
 
+declare var $: any;
+declare var gapi: any
+
 function onSuccess(googleUser) {
         var profile = googleUser.getBasicProfile();
         gapi.client.load('plus', 'v1', function () {
