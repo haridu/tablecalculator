@@ -1,5 +1,3 @@
-
-var numeral;
 function onSuccess(googleUser) {
         var profile = googleUser.getBasicProfile();
         gapi.client.load('plus', 'v1', function () {
@@ -36,7 +34,7 @@ function onSuccess(googleUser) {
             $('#gSignIn').slideDown('slow');
         });
     }
-    
+var numeral;
 function formula() {
     var block_size = parseInt(document.getElementById('block_in').value);
     var KCBH_IN = parseInt(document.getElementById('KCBH_IN').value);
