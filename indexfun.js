@@ -34,6 +34,7 @@ function onSuccess(googleUser) {
             $('#gSignIn').slideDown('slow');
         });
     }
+    
 var numeral;
 function formula() {
     var block_size = parseInt(document.getElementById('block_in').value);
