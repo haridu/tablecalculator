@@ -1,4 +1,4 @@
 # tablecalculator
 
-API Callings-Google login 
-Adavanced requirements- continues deployement,facebook sharing and like
+1)API Callings-Google login 
+2)Adavanced requirements- continues deployement,facebook sharing and like
