@@ -37,8 +37,6 @@ function onSuccess(googleUser) {
     }
     
 var numeral : any
-
-
 function formula() {
 
 
